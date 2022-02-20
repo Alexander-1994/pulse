@@ -1,0 +1,36 @@
+.header {
+	display: flex;														/* выравниваем дочерние элементы с помощью flex  */	
+	justify-content: space-between;
+	align-items: center;
+	&__logo {																	
+		width: 250px;
+		img {
+			width: 100%;													/* изображение будет иметь ширину 100% родителя, таким образом мы гарантируем, что в дальнейшем если лого поменяется - элементы не "поедут" */
+		}	
+	}
+	&__official {
+		color: $white;
+		font-weight: 500;
+		font-size: 12px;
+		text-align: center;
+	  span {		
+			display: block;												/* вообще span - строчный элемент, мы делаем элемент блочным и теперь выделенный текст перенесется и займет всю ширину */
+			font-size: 18px;
+		}	
+	}	
+	&__contacts {
+		display: flex;
+		flex-direction: column;									/* расположим дочерние элементы вертикально */
+		align-items: flex-end;									/* и прижмем к правому краю */
+	}
+	&__phone {
+		display: block;
+		color: $white;
+		font-weight: 700;
+		font-size: 18px;
+		text-decoration: none;									/* отменяем подчеркивание ссылки */
+		&:hover {
+			color: $white;												/* отменяем подсвечивание ссылки при наведении */
+		}	
+	}
+}

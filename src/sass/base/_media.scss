@@ -1,0 +1,120 @@
+@media (max-width: 991px) {
+	.container {
+		width: 720px;													/* для корректной адаптации меняю ширину контейнера под пороговые разрешения экранов  */
+	}	
+	.promo {
+		background-position: 40% 0;						/* изменяю позиционирование фона секции, для адекватного отображения */
+	}	
+	.advantages {
+		&__item {
+			min-width: 210px;
+			font-size: 12px;
+		}
+	}
+}
+@media (max-width: 767px) {
+	.container {
+		width: 540px;
+	}	
+	.header {
+		&__official {
+			&_disabled {
+				display: none;										/* отключаю отображение данного элемента на данных разрешениях экранов путем добавления модификатора */
+			}
+		}
+	}
+	.promo {
+		background-position: 30% 0;						/* изменяю позиционирование фона секции, для адекватного отображения */
+		&__header {
+			font-size: 25px;
+		}
+		&__subheader {
+			font-size: 16px;
+		}
+		&__icons {
+			width: 320px;
+			align-items: center;
+		}
+		&__icon {
+			font-size: 12px;
+		}
+	}
+	.advantages {
+		&__wrapper {
+			flex-direction: column;							/* вертикальное отображение дочерних элементов */
+			align-items: center;
+		}
+		&__item {
+			margin-bottom: 50px;
+		}
+	}
+}
+@media (max-width: 575px) {
+	.container {
+		width: 100%;
+	}	
+	.header {
+		flex-direction: column;							  /* вертикальное отображение дочерних элементов хедера */	
+		align-items: center;
+		&__logo {
+			width: 150px;
+		}
+		&__contacts {
+			align-items: center;
+		}
+		&__phone {
+			margin-top: 10px;
+			font-size: 10px;
+		}
+	}
+	.button {
+		&_mobile {														/* изменяем параметры кнопки, задав ей модификатор */
+			margin-top: 10px;
+			width: 35vw;
+			height: 22px;
+			font-size: 10px;
+		}
+		&_main {															/* изменяем параметры "главной" кнопки, задав ей модификатор */
+			width: 80vw;
+		}
+	}		
+	.promo {
+		&__wrapper {             
+    	align-items: center;  
+		}
+		&__header {
+			font-size: 20px;
+		}
+		&__subheader {
+			margin-top: 5px;
+			font-size: 12px;
+		}
+		&__icons {
+			flex-direction: column;
+		}
+		&__icon {
+			width: 100%;
+			font-size: 15px;
+			text-decoration: underline;
+			img {																
+				display: none;										/* отключаем изображения иконок у данных элементов */
+			}
+		}
+		&__link {
+			font-size: 12px;
+			a {
+				padding: 10px;										/* т.к. ссылка мелкая и попасть по ней пальцем трудно */
+			}
+		}
+	}	
+	.advantages {
+		&__item {
+			max-width: 200px;
+		}
+	}
+	.title {
+		&_mobile {														/* изменим размер с помощью модификатора */
+			font-size: 23px;
+		}
+	}	
+}

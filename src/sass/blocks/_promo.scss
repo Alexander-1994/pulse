@@ -1,0 +1,54 @@
+.promo {
+  min-height: 650px;
+  padding: 21px 0 93px 0;
+  background: url(../img/bg_first.jpg) center (center/cover) no-repeat; /* мы делаем 1 выход из папки вместо 2, т.к. выход будет из папки css (компиляция данного файла сохр. в файле style.min.css) */
+  &__wrapper {                                                          /* обёртка */
+    display: flex;                                                       
+    flex-direction: column;                                             /* вырвынивание вертикально */
+    align-items: flex-end;                                              /* прижимаем к правому краю дочерние элементы */
+  }
+  &__header {
+    margin-top: 91px;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 42px;
+    text-transform: uppercase;
+    color: $white;
+  }
+  &__subheader {
+    margin-top: 17px;
+    font-weight: 500;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: $white;
+  }
+  &__icons {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    width: 425px;
+  }
+  &__icon {
+    width: 108px;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    color: $white;
+    img {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+  }
+  &__link {
+    margin-top: 18px;
+    color: $white;
+    font-weight: 500;
+    font-size: 16px;
+    a {
+      text-decoration: underline;
+      text-transform: uppercase;
+      color: $white;
+    }
+  }
+}
