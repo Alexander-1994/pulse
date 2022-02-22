@@ -11,6 +11,11 @@
 			font-size: 12px;
 		}
 	}
+	.title {
+		&_left {
+			font-size: 30px;
+		}
+	}
 }
 @media (max-width: 767px) {
 	.container {
@@ -47,6 +52,19 @@
 		&__item {
 			margin-bottom: 50px;
 		}
+	}
+	.title {
+		&_left {
+			font-size: 25px;
+		}
+	}
+	.consultation {
+		&__descr {
+			font-size: 15px;
+		}
+	}
+	.feed-form {											
+		width: 250px;
 	}
 }
 @media (max-width: 575px) {
@@ -116,5 +134,28 @@
 		&_mobile {														/* изменим размер с помощью модификатора */
 			font-size: 23px;
 		}
+		&_left {
+			font-size: 18px;
+			font-weight: 500;
+			line-height: 20px;
+			text-align: center;
+			span{														/* "отключаем посл. часть заголовка */
+				display: none;
+			}
+		}
+	}
+	.consultation {
+		padding-left: 5vw;
+		padding-right: 5vw;
+		&__descr {
+			font-size: 12px;
+			line-height: 12px;
+			text-align: center;
+		}
 	}	
+	.feed-form {
+		&_mobile {
+			margin: 36px auto 0 auto;
+		}
+	}
 }

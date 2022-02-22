@@ -14,7 +14,7 @@
         <div class="container">
             <header class="header"> <!-- блок по БЭМ -->    
                 <a href="#" class="header__logo"><img src="icons/logo.png" alt="logo"></a>  <!-- элемент по БЭМ -->
-                <div class="header__official header__official_disabled">  <!-- элемент по БЭМ -->
+                <div class="header__official header__official_disabled">  <!-- элемент по БЭМ. С помощью модификатора - отключаем отображение этого элемента в моб. версии -->
                     Официальный представитель <span>Garmin, Polar, Suunto</span>
                 </div>
                 <div class="header__contacts">  <!-- элемент по БЭМ -->
@@ -22,7 +22,7 @@
                     <button class="button button_mobile">заказать звонок</button> <!-- блок по БЭМ -->
                 </div>
             </header>    
-            <div class="promo__wrapper">
+            <div class="promo__wrapper">    <!-- "обёртка. С помощью этого блока будем выравнивать флексами дочерние (в html) элементы" -->
                 <h1 class="promo__header">Подбор пульсометра</h1>
                 <h2 class="promo__subheader">с учётом Вашего уровня подготовки</h2>
                 <div class="promo__icons">
@@ -71,6 +71,24 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="consultation">
+        <div class="container">
+            <h2 class="title title_left">   <!-- можифицируем title для конкретной секции -->
+                Получите бесплатную консультацию<br><span>по подбору пульсометра</span> 
+            </h2>
+            <div class="consultation__descr">
+                Просто заполните форму заявки<br>и мы перезвоним вам в течении 10 минут
+            </div>
+            <form class="feed-form feed-form_mobile" action="#">     <!-- форма -->
+                <input name="name" required placeholder="Ваше имя" type="text">
+                <input name="phone" required placeholder="Ваш телефон" type="number">
+                <input name="email" required placeholder="Ваш E-mail" type="email">
+                <!-- <input type="submit" value="заказать консультацию"> - это первый вариант создания кнопки для формы -->
+                <button class="button button_submit">заказать консультацию</button>
+            </form>
         </div>
     </div>
 </body>
