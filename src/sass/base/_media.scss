@@ -16,6 +16,14 @@
 			font-size: 30px;
 		}
 	}
+	.carousel {
+		&__inner {
+			width: 90%;									/* ширина слайдера на экранах шириной до 991px равно 90% ширины родителя */
+			img {
+				width: 100%;
+			}
+		}
+	}
 }
 @media (max-width: 767px) {
 	.container {
@@ -155,7 +163,12 @@
 	}	
 	.feed-form {
 		&_mobile {
-			margin: 36px auto 0 auto;
+			margin: 36px auto 0 auto;									/* установим в моб. версии горизонтальное положение формы - по центру */
+		}
+	}
+	.carousel {
+		&__inner {
+			width: inherit;												/* ширина слайдера в моб. версии унаследует значение родителя (100%) */
 		}
 	}
 }

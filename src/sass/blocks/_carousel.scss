@@ -1,0 +1,27 @@
+.carousel {
+    padding: 81px 0;
+    &__inner {
+        position: relative;
+        width: 750px;
+        margin: 0 auto;
+    }
+    .slick-prev, .slick-next {                              /* стилизуем наши стрелки по классуки (из кода-настройки в script.js) */
+        position: absolute;                                 /* абсолютно позиц. стрелки относительно родителя inner */
+        top: 50%;                                           /* смещаем стрелки от верха вниз на 50% родителя inner */
+        transform: translateX(-50%);                        /* смещаем по оси X еще на пол-корпуса стрелки вниз */    
+        left: -66px;                                        /* расположем левую стрелку на 66px влево от наружной границы inner */
+        width: 30px;
+        height: 50px;
+        border: none;
+        background-color: $white;
+    }
+    .slick-next {
+        right: -66px;                                       /* расположем правую стрелку на 66px вправо от наружной границы inner */
+        left: auto;                                         /* выключаем Left, чтобы при позиционировании правой стрелки он подставлялся автоматически */
+    }
+    .slick-dots {                                           /* взял этот класс из Slick/setting для стилизации */
+        display: flex;                                      
+        justify-content: center;
+        list-style-type: none;                              /* отключаем маркерование */
+    }
+}

@@ -7,10 +7,11 @@
     <title>Pulse</title>
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/slick.css">    <!-- стили к slick-карусели -->
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <div class="promo">
+    <section class="promo">
         <div class="container">
             <header class="header"> <!-- блок по БЭМ -->    
                 <a href="#" class="header__logo"><img src="icons/logo.png" alt="logo"></a>  <!-- элемент по БЭМ -->
@@ -43,9 +44,9 @@
                 <div class="promo__link">или <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a></div>
             </div>    
         </div>
-    </div>
+    </section>
 
-    <div class="advantages">
+    <section class="advantages">
         <div class="container">
             <h2 class="title title_mobile">НАШИ ПРЕИМУЩЕСТВА</h2>
             <div class="advantages__wrapper">
@@ -72,9 +73,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="consultation">
+    <section class="consultation">
         <div class="container">
             <h2 class="title title_left">   <!-- можифицируем title для конкретной секции -->
                 Получите бесплатную консультацию<br><span>по подбору пульсометра</span> 
@@ -90,6 +91,22 @@
                 <button class="button button_submit">заказать консультацию</button>
             </form>
         </div>
-    </div>
+    </section>
+
+    <section class="carousel">
+        <div class="container">
+            <div class="carousel__inner">   <!-- структуру скопировали с Slick, присвоили класс и заполнили -->
+                <div><img src="img/carousel_1.jpg" alt="slide"></div>
+                <div><img src="img/carousel_2.jpg" alt="slide"></div>
+                <div><img src="img/carousel_3.jpg" alt="slide"></div>
+            </div>
+        </div>
+    </section>    
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>   <!-- подключение библиотеки jquery (вначале добавил "https:" чтобы скрипты заработали) -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>    <!-- подключение библиотеки jquery (вначале добавил "https:" чтобы скрипты заработали) -->
+    <script type="text/javascript" src="js/slick.min.js"></script>  <!-- js-файл с самим слайдером (подключаем после jquery) -->
+    <script src="js/script.js"></script>    <!-- наш рабочий js-файл (в конце всех скриптов) В нем записываем разл. настройки, скрипты поведения нашего сайта и т.д. -->
 </body>
 </html>
+
