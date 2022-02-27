@@ -74,6 +74,18 @@
 	.feed-form {											
 		width: 250px;
 	}
+	.catalog {
+		&__tabs {
+			width: 100%;
+			flex-wrap: wrap;							 /* перенос табов при необходимости возможен на другую строку */
+		}
+		&__tab {
+			margin: 5px 5px;
+			&:hover {
+				box-shadow: none;						 /* отключаем тень табов при наведении */
+			}
+		}
+	}
 }
 @media (max-width: 575px) {
 	.container {
@@ -156,6 +168,7 @@
 		padding-left: 5vw;
 		padding-right: 5vw;
 		&__descr {
+			margin-top: 10px;
 			font-size: 12px;
 			line-height: 12px;
 			text-align: center;
@@ -170,5 +183,40 @@
 		&__inner {
 			width: inherit;												/* ширина слайдера в моб. версии унаследует значение родителя (100%) */
 		}
+	}
+	.catalog {
+		&__tab {														/* изменим размеры табов: */
+			width: 150px;
+			height: 30px;
+			font-size: 12px;
+			line-height: 28px;
+		}
+		&__content {
+			position: relative;
+		}
+	}
+	.reviews {
+		&-item {
+			flex-direction: column;
+			align-items: center;
+			&__photo {
+				margin-right: 0;
+				margin-bottom: 30px;
+			}
+			&__text {
+				width: 70vw;
+			}	
+			&__name {
+				text-align: center;
+			}
+			&__stage {
+				text-align: center;
+			}
+			&__descr {
+				font-size: 14px;
+				text-align: center;
+				padding-right: 0;
+			}
+		}	
 	}
 }

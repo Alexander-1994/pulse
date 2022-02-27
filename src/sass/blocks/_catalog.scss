@@ -1,0 +1,175 @@
+.catalog {
+    padding-bottom: 100px;
+    &__tabs {
+        margin-top: 47px;
+        margin-bottom: 0;                                                   /* отключ. нижний марджин, заданный reebot */
+        padding-left: 0;                                                    /* отключ. левый паддинг, заданный reebot */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__tab {
+        margin: 0 5px;                                                      /* уст. равномерные горизонт. отступы м/у табами  */
+        width: 220px;
+        height: 50px;
+        background-color: rgba(0, 0, 0, 0.0001);
+        border: 2px solid #D0D0D0;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 50px;                                                  /* межстрочный интервал=высота кнопки(почти), чтобы ровно выравнять текст в табе по вертикали */
+        color: #6B6B6B;
+        text-transform: uppercase;
+        text-align: center;
+        list-style-type: none;                                              /* отключ маркерование списка */
+        cursor: pointer;
+        transform: skewX(-25deg);                                           /* наклоняем табы как в макете с помощью этого св-ва */
+        transition: 0.5s all;                                               /* задержка для эффекта наведения hover */
+        &:hover {                                                           /* при наведении на табы: */
+            box-shadow: 3px 3px 20px $main-color;                           /* появляется тень (смещение по X и Y, размытие, цвет */
+        }
+        div  {
+            transform: skewX(25deg);                                        /* отменяем наклон текста в табе */
+        }
+        &_active {                                                          /* стилизуем активный таб */
+            background-color: $main-color;
+            color: $white;
+            border: none;
+        }
+    }
+    &__content {                                                            
+        margin-top: 60px;
+        display: none;                                                       /* "выключаем" неактивный контент */
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &_active {
+            display: flex;                                                   /* отображаться на странице будет только контент с классом активности! */
+        }
+    }
+    &-item {
+        margin-bottom: 15px;
+        padding: 20px 20px 26px 20px;
+        width: 300px;
+        min-height: 440px;                                                  /* устанавливаем мин. высоту карточки, т.к. контент может увеличиваться */
+        border: 2px solid #E8E8E8;
+        overflow: hidden;                                                   /* СКРЫВАЕМ контент, выходящий за пределы .catalog-item */
+        &__img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;                                                /* максимальная ширина картинки не должна привышать ширины родителя, т.е. 100% */
+            height: 200px;                                                  /* высоту задаем строго 200px */
+        }
+        &__subtitle {
+            margin-top: 20px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 16px;
+            text-align: center;
+            color: #0D0D0D;
+        }
+        &__descr {
+            margin-top: 15px;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 22px;
+            text-align: center;
+            color: #0D0D0D;
+        }
+        &__link {
+            margin-top: 17px;
+            display: block;
+            text-align: center;
+            font-weight: 500;
+            font-size: 14px;
+            text-decoration: underline;
+            text-transform: uppercase;
+            color: $main-color;
+            &:hover {
+                color: $main-color;                                        /* при наведении ссылка не будет менять цвет */
+            }
+        }
+        hr {
+            margin-top: 19px;
+            margin-bottom: 21px;
+            background: #E8E8E8;
+            height: 2px;
+        }
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__old-price {
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 14px;
+            text-decoration: line-through;                                 /* "зачеркнуть" */
+            color: #555555;
+        }
+        &__price {
+            font-size: 20px;
+            font-weight: 700;
+            color: #050505;
+        }
+        &__wrapper {                                                       /* обёртка под "контент" и "лист" по-простому: это два слайда внутри карточки, которые будут замещать друг друга при нажатии на ссылку */
+            display: flex;
+            width: calc(200% + 40px);                                      /* для корректной установки ширины обёртки используем функцию calc(), которая складывает в данном случае 200% от ширины родителя и 2 марджина по 20px */
+        }
+        &__content {
+            margin-right: 0;
+            width: 50%;                                                    /* 50% от родителя (wrapper) */
+            transform: translateX(-100%);                                  /* сдвигаем влево -100% при состоянии покоя */
+            transition: 0.5s all;                                          /* с задержкой в пол-секунды */ 
+            &_active {                                                     /* активное состояние контента */
+                transform: translateX(0);
+                margin-right: 20px;
+            }
+        }
+        &__list {
+            position: relative;                                            /* для абсолютного позиц. дочерней ссылки НАЗАД */
+            margin-left: 20px;
+            margin-bottom: 0;                                              /* отключ. значения reebot у списка */
+            padding-left: 19px;                                            /* перекрываем значение reebot у списка нужным нам значением */
+            width: 50%;                                                    /* 50% от родителя (wrapper) */
+            transform: translateX(0);
+            list-style-type: none;
+            transition: 0.5s all;
+            li {
+                position: relative;                                        /* для абсолютного позиц. псевдоэлемента */
+                margin-bottom: 5px;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 21px;
+                color: #555555;
+                &::before {                                                /* создаем квадратики-маркеры */
+                    position: absolute;
+                    left: -15px;
+                    top: 7px;
+                    content: '';                                           /* обязательное свойство, всегда прописывать для псевдоэлемента */
+                    width: 5px;
+                    height: 5px;
+                    background-color: $main-color;
+                }
+            }
+            &_active {
+                padding-right: 20px;
+                transform: translateX(-100%);
+                margin-left: 0;
+            }
+        }
+        &__back {
+            position: absolute;
+            bottom: 3px;
+            left: 50%;
+            transform: translateX(calc(-50% - 19px));                       /* ссылка НАЗАД спозиц. относительно ul, а у ul левый паддинг. Учитываем это в функции calc() */
+            font-weight: 500;
+            font-size: 14px;
+            text-align: center;
+            text-decoration: underline;
+            text-transform: uppercase;
+            color: $main-color; 
+            &:hover {                                                       /* отменяем изменение цвета при наведении на ссылку */
+                color: $main-color;
+            }
+        }
+    }
+}

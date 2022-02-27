@@ -4,6 +4,7 @@
 	text-align: center;
 	color: #0D0D0D;
 	text-transform: uppercase;
+	margin-bottom: 0;									/* отключ. нижний марджин, заданный reebot */
 	&_left {
 		text-align: left;
 		color: $white;

@@ -7,8 +7,8 @@
     <title>Pulse</title>
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/slick.css">    <!-- стили к slick-карусели -->
-    <link rel="stylesheet" href="css/style.min.css">
+     <link rel="stylesheet" href="css/slick.css">   <!-- стили к slick-карусели --> 
+     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
     <section class="promo">
@@ -95,17 +95,328 @@
 
     <section class="carousel">
         <div class="container">
-            <div class="carousel__inner">   <!-- структуру скопировали с Slick, присвоили класс и заполнили -->
+            <div class="carousel__inner">   <!-- Структура для сервисов Slick и Tiny-Slider. Cтруктуру скопировали с Slick, (в Tiny-Slider такая же структура использ.): -->
                 <div><img src="img/carousel_1.jpg" alt="slide"></div>
                 <div><img src="img/carousel_2.jpg" alt="slide"></div>
                 <div><img src="img/carousel_3.jpg" alt="slide"></div>
             </div>
         </div>
     </section>    
+    
+    <section class="catalog">
+        <div class="container">
+            <h2 class="title title_mobile">Каталог пульсометров</h2>
+            <ul class="catalog__tabs">      
+                <li class="catalog__tab catalog__tab_active"><div>Для фитнеса</div></li> <!-- [самаому первому ТАБу устанавливаем класс активности, чтобы он был активен по-умолчанию] -->
+                <li class="catalog__tab"><div>для бега</div></li>
+                <li class="catalog__tab"><div>для триатлона</div></li>
+            </ul>   <!-- в div помещаем текст табов, чтобы потом по тегу отменить наклон текста -->
+            <div class="catalog__content catalog__content_active">  <!-- контент под вкладку ДЛЯ ФИТНЕСА [самаому первому КОНТЕНТу устанавливаем класс активности, чтобы он был активен по-умолчанию] -->
+                <div class="catalog-item">  <!-- создаём карточку -->
+                    <div class="catalog-item__wrapper">     <!-- создаем обёртку под "контент" и "лист" (описание) они будут чередоваться м/у собой -->
+                        <div class="catalog-item__content catalog-item__content_active">     <!-- "контент" - лицевая сторона карточки [именно "лицевой стороне" устанавливаем класс активности, чтобы она была активна по-умолчанию]-->
+                            <img src="img/pulsometr.jpg" alt="pulsometr" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
+                            <div class="catalog-item__descr">
+                                Для первых шагов в тренировках, основанных на сердечном ритме
+                            </div>
+                            <a href="#" class="catalog-item__link">подробнее</a>
+                        </div>
+                        <ul class="catalog-item__list">    <!-- "лист" - описание карточки -->
+                            <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                            <a href="#" class="catalog-item__back">назад</a>
+                        </ul>
+                    </div>
+                    <hr>    <!-- линия. Именно она визуально отделяет интерактивную часть карточки, состоящую из двух слайдов от футера -->
+                    <div class="catalog-item__footer">
+                        <div class="catalog-item__prices">
+                            <div class="catalog-item__old-price">4 750 руб.</div>
+                            <div class="catalog-item__price">4 500 руб.</div>
+                        </div>     
+                        <button class="button button_mini">КУПИТЬ</button>  <!-- с помощью модификатора, стилизуем кнопку(блок по БЭМ) -->          
+                    </div>
+                </div>
+                <div class="catalog-item">  <!-- создаём карточку 2 -->
+                    <div class="catalog-item__wrapper">     <!-- создаем обёртку под "контент" и "лист" (описание) они будут чередоваться м/у собой -->
+                        <div class="catalog-item__content catalog-item__content_active">     <!-- "контент" - лицевая сторона карточки -->
+                            <img src="img/pulsometr.jpg" alt="pulsometr" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Пульсометр Suunto M2</div>
+                            <div class="catalog-item__descr">
+                                Для первых шагов в тренировках, основанных на сердечном ритме
+                            </div>
+                            <a href="#" class="catalog-item__link">подробнее</a>
+                        </div>
+                        <ul class="catalog-item__list">    <!-- "лист" - описание карточки -->
+                            <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                            <a href="#" class="catalog-item__back">назад</a>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="catalog-item__footer">
+                        <div class="catalog-item__prices">
+                            <div class="catalog-item__old-price">6 690 руб</div>
+                            <div class="catalog-item__price">6 641 руб.</div>
+                        </div>     
+                        <button class="button button_mini">КУПИТЬ</button>  <!-- с помощью модификатора, стилизуем кнопку(блок по БЭМ) -->          
+                    </div>
+                </div>
+                <div class="catalog-item">  <!-- создаём карточку 3 -->
+                    <div class="catalog-item__wrapper">     <!-- создаем обёртку под "контент" и "лист" (описание) они будут чередоваться м/у собой -->
+                        <div class="catalog-item__content catalog-item__content_active">     <!-- "контент" - лицевая сторона карточки -->
+                            <img src="img/pulsometr.jpg" alt="pulsometr" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Пульсометр Polar FT4</div>
+                            <div class="catalog-item__descr">
+                                Для первых шагов в тренировках, основанных на сердечном ритме
+                            </div>
+                            <a href="#" class="catalog-item__link">подробнее</a>
+                        </div>
+                        <ul class="catalog-item__list">    <!-- "лист" - описание карточки -->
+                            <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                            <a href="#" class="catalog-item__back">назад</a>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="catalog-item__footer">
+                        <div class="catalog-item__prices">
+                            <div class="catalog-item__old-price">7 390 руб</div>
+                            <div class="catalog-item__price">7 021 руб.</div>
+                        </div>     
+                        <button class="button button_mini">КУПИТЬ</button>  <!-- с помощью модификатора, стилизуем кнопку(блок по БЭМ) -->          
+                    </div>
+                </div>
+                <div class="catalog-item">  <!-- создаём карточку 4 -->
+                    <div class="catalog-item__wrapper">     <!-- создаем обёртку под "контент" и "лист" (описание) они будут чередоваться м/у собой -->
+                        <div class="catalog-item__content catalog-item__content_active">     <!-- "контент" - лицевая сторона карточки -->
+                            <img src="img/pulsometr.jpg" alt="pulsometr" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
+                            <div class="catalog-item__descr">
+                                Для первых шагов в тренировках, основанных на сердечном ритме
+                            </div>
+                            <a href="#" class="catalog-item__link">подробнее</a>
+                        </div>
+                        <ul class="catalog-item__list">    <!-- "лист" - описание карточки -->
+                            <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                            <a href="#" class="catalog-item__back">назад</a>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="catalog-item__footer">
+                        <div class="catalog-item__prices">
+                            <div class="catalog-item__old-price">4 750 руб.</div>
+                            <div class="catalog-item__price">4 500 руб.</div>
+                        </div>     
+                        <button class="button button_mini">КУПИТЬ</button>  <!-- с помощью модификатора, стилизуем кнопку(блок по БЭМ) -->          
+                    </div>
+                </div>
+                <div class="catalog-item">  <!-- создаём карточку 5 -->
+                    <div class="catalog-item__wrapper">     <!-- создаем обёртку под "контент" и "лист" (описание) они будут чередоваться м/у собой -->
+                        <div class="catalog-item__content catalog-item__content_active">     <!-- "контент" - лицевая сторона карточки -->
+                            <img src="img/pulsometr.jpg" alt="pulsometr" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Пульсометр Suunto M2</div>
+                            <div class="catalog-item__descr">
+                                Для первых шагов в тренировках, основанных на сердечном ритме
+                            </div>
+                            <a href="#" class="catalog-item__link">подробнее</a>
+                        </div>
+                        <ul class="catalog-item__list">    <!-- "лист" - описание карточки -->
+                            <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                            <a href="#" class="catalog-item__back">назад</a>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="catalog-item__footer">
+                        <div class="catalog-item__prices">
+                            <div class="catalog-item__old-price">6 690 руб</div>
+                            <div class="catalog-item__price">6 641 руб.</div>
+                        </div>     
+                        <button class="button button_mini">КУПИТЬ</button>  <!-- с помощью модификатора, стилизуем кнопку(блок по БЭМ) -->          
+                    </div>
+                </div>
+                <div class="catalog-item">  <!-- создаём карточку 6 -->
+                    <div class="catalog-item__wrapper">     <!-- создаем обёртку под "контент" и "лист" (описание) они будут чередоваться м/у собой -->
+                        <div class="catalog-item__content catalog-item__content_active">     <!-- "контент" - лицевая сторона карточки -->
+                            <img src="img/pulsometr.jpg" alt="pulsometr" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Пульсометр Polar FT4</div>
+                            <div class="catalog-item__descr">
+                                Для первых шагов в тренировках, основанных на сердечном ритме
+                            </div>
+                            <a href="#" class="catalog-item__link">подробнее</a>
+                        </div>
+                        <ul class="catalog-item__list">    <!-- "лист" - описание карточки -->
+                            <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                            <a href="#" class="catalog-item__back">назад</a>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="catalog-item__footer">
+                        <div class="catalog-item__prices">
+                            <div class="catalog-item__old-price">7 390 руб</div>
+                            <div class="catalog-item__price">7 021 руб.</div>
+                        </div>     
+                        <button class="button button_mini">КУПИТЬ</button>  <!-- с помощью модификатора, стилизуем кнопку(блок по БЭМ) -->          
+                    </div>
+                </div>
+            </div>
+            <div class="catalog__content">  <!-- контент под вкладку ДЛЯ БЕГА -->
+                <div class="catalog-item">  
+                    <div class="catalog-item__wrapper">     <!-- создаем обёртку под "контент" и "лист" (описание) они будут чередоваться м/у собой -->
+                        <div class="catalog-item__content catalog-item__content_active">     <!-- "контент" - лицевая сторона карточки -->
+                            <img src="img/pulsometr.jpg" alt="pulsometr" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
+                            <div class="catalog-item__descr">
+                                Для первых шагов в тренировках, основанных на сердечном ритме
+                            </div>
+                            <a href="#" class="catalog-item__link">подробнее</a>
+                        </div>
+                        <ul class="catalog-item__list">    <!-- "лист" - описание карточки -->
+                            <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                            <a href="#" class="catalog-item__back">назад</a>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="catalog-item__footer">
+                        <div class="catalog-item__prices">
+                            <div class="catalog-item__old-price">4 750 руб.</div>
+                            <div class="catalog-item__price">4 500 руб.</div>
+                        </div>     
+                        <button class="button button_mini">КУПИТЬ</button>  <!-- с помощью модификатора, стилизуем кнопку(блок по БЭМ) -->          
+                    </div>
+                </div>
+            </div>  
+            <div class="catalog__content">  <!-- контент под вкладку ДЛЯ ТРИАТЛОНА -->
+                <div class="catalog-item">  
+                    <div class="catalog-item__wrapper">     <!-- создаем обёртку под "контент" и "лист" (описание) они будут чередоваться м/у собой -->
+                        <div class="catalog-item__content catalog-item__content_active">     <!-- "контент" - лицевая сторона карточки -->
+                            <img src="img/pulsometr.jpg" alt="pulsometr" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Пульсометр Suunto M2</div>
+                            <div class="catalog-item__descr">
+                                Для первых шагов в тренировках, основанных на сердечном ритме
+                            </div>
+                            <a href="#" class="catalog-item__link">подробнее</a>
+                        </div>
+                        <ul class="catalog-item__list">    <!-- "лист" - описание карточки -->
+                            <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                            <a href="#" class="catalog-item__back">назад</a>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="catalog-item__footer">
+                        <div class="catalog-item__prices">
+                            <div class="catalog-item__old-price">6 690 руб</div>
+                            <div class="catalog-item__price">6 641 руб.</div>
+                        </div>     
+                        <button class="button button_mini">КУПИТЬ</button>  <!-- с помощью модификатора, стилизуем кнопку(блок по БЭМ) -->          
+                    </div>
+                </div>
+                <div class="catalog-item">  
+                    <div class="catalog-item__wrapper">     <!-- создаем обёртку под "контент" и "лист" (описание) они будут чередоваться м/у собой -->
+                        <div class="catalog-item__content catalog-item__content_active">     <!-- "контент" - лицевая сторона карточки -->
+                            <img src="img/pulsometr.jpg" alt="pulsometr" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Пульсометр Polar FT4</div>
+                            <div class="catalog-item__descr">
+                                Для первых шагов в тренировках, основанных на сердечном ритме
+                            </div>
+                            <a href="#" class="catalog-item__link">подробнее</a>
+                        </div>
+                        <ul class="catalog-item__list">    <!-- "лист" - описание карточки -->
+                            <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                            <a href="#" class="catalog-item__back">назад</a>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="catalog-item__footer">
+                        <div class="catalog-item__prices">
+                            <div class="catalog-item__old-price">7 390 руб</div>
+                            <div class="catalog-item__price">7 021 руб.</div>
+                        </div>     
+                        <button class="button button_mini">КУПИТЬ</button>  <!-- с помощью модификатора, стилизуем кнопку(блок по БЭМ) -->          
+                    </div>
+                </div>
+            </div>  
+        </div>    
+    </section>
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>   <!-- подключение библиотеки jquery (вначале добавил "https:" чтобы скрипты заработали) -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>    <!-- подключение библиотеки jquery (вначале добавил "https:" чтобы скрипты заработали) -->
-    <script type="text/javascript" src="js/slick.min.js"></script>  <!-- js-файл с самим слайдером (подключаем после jquery) -->
+    <section class="reviews">
+        <div class="container">
+            <h2 class="title title_mobile">отзывы клиентов</h2>
+            <div class="reviews-item">
+                <img src="img/photo_1.jpg" alt="photo" class="reviews-item__photo">
+                <div class="reviews-item__text">
+                    <div class="reviews-item__name">Ирина Иванченко </div>
+                    <div class="reviews-item__stage">2 полумарафона</div>
+                    <div class="reviews-item__descr">
+                        Не знала, что себе купить - обратилась к ребятам из RunSmart - подобрали пульсометр, который подошёл именно под мои цели и финансовые возможности.
+                        <br><br>
+                        Через некоторое время решила обновить гаджет - не раздумывая обратилась туда же.
+                        <br><br>
+                        Новые цели - новый гаджет!
+                        Спасибо, RunSmart! 
+                    </div>
+                </div>
+            </div>
+            <div class="reviews-item">
+                <img src="img/photo_2.jpg" alt="photo" class="reviews-item__photo">
+                <div class="reviews-item__text">
+                    <div class="reviews-item__name">Иван Сёмочкин</div>
+                    <div class="reviews-item__stage">1 полумарафон</div>
+                    <div class="reviews-item__descr">
+                        Крутая штука-пульсометр. Обычно без них бегал. Оказывается только хуже себе делал. 
+                        <br><br>
+                        Купил пульсометр, ещё в подарок получил тренировку. Со мной вместе провели первую тренировку, научили пользоваться новым гаджетом. Также объяснили основы анатомии, составили план тренировок на месяц вперёд.
+                        <br><br>
+                        С ними подготовился к своему первому полумарафону! Спасибо!!!
+                    </div>
+                </div>
+            </div>
+            <div class="reviews-item">
+                <img src="img/photo_3.jpg" alt="photo" class="reviews-item__photo">
+                <div class="reviews-item__text">
+                    <div class="reviews-item__name">Юлия Дашкина</div>
+                    <div class="reviews-item__stage">2 полумарафона</div>
+                    <div class="reviews-item__descr">
+                        Долго не могла начать бегать, т.к. до этого несколько раз начинала, но становилось тяжело и я бросала. От друзей услышала о RunSmart и о беге с контролем пульса и решила попробовать.
+                        <br><br>
+                        Позвонила, ребята поинтересовались моими целями и подобрали очень интересный вариант со скидкой! Теперь бегаю и наслаждаюсь бегом! Пробежала уже 2 полумарафона и несколько более коротких забегов и не намерена останавливаться!
+                        <br><br>
+                        Спасибо!!!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Подключение слайдера Slick с помощью JQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>    <!--  подключение библиотеки jquery (вначале добавил "https:" чтобы скрипты заработали) -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>   <!--  подключение библиотеки jquery (вначале добавил "https:" чтобы скрипты заработали) -->
+    <script type="text/javascript" src="js/slick.min.js"></script>   <!-- js-файл с самим слайдером (подключаем после jquery) -->
+
     <script src="js/script.js"></script>    <!-- наш рабочий js-файл (в конце всех скриптов) В нем записываем разл. настройки, скрипты поведения нашего сайта и т.д. -->
 </body>
 </html>
