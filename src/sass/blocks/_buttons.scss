@@ -9,6 +9,11 @@
 	text-align: center;
 	text-transform: uppercase;
 	color: $white;
+	transition: 0.3s all;
+	&:hover {
+		background-color: rgb(27, 109, 233);
+		font-weight: 900;
+	}
 	&_main {																					/* main - модификатор */
 		margin-top: 67px;
 		width: 300px;
