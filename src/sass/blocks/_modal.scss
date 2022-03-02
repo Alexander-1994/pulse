@@ -1,0 +1,44 @@
+.overlay {                                                  /* "затемнение" заднего фона. Нужно при появлении модальных окон */
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.56);
+    display: none;                                          /* отключаем затемнение фона, подключать его будем с помощью js-кода в нужный момент */
+}
+.modal {
+    position: absolute;                                     /* можно позиционировать даже с родительским fixed */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);                       /* отступ вниз и вправо "на пол-корпуса" */
+    padding: 38px 40px 40px 40px;
+    width: 380px;
+    min-height: 400px;
+    background-color: #F2F2F2;;
+    &__close {                                              /* т.к. крестик - текстовый символ, мы можем задавать ему размер шрифта и жирность */
+        position: absolute;
+        top: 0;
+        right: -40px;
+        font-size: 40px;
+        line-height: 21px;
+        font-weight: 700;
+        color: $main-color;
+        cursor: pointer;
+    }
+    &__subtitle {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 18px;
+        text-align: center;
+    }
+    &__descr {
+        margin-top: 10px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 22px;
+        text-align: center;
+    }
+}
+#consultation, #order, #thanks {                            /* отключаем наши модальные окна по id, подключать их будем с помощью js-кода в нужный момент */
+    display: none;
+}

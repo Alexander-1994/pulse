@@ -20,7 +20,7 @@
                 </div>
                 <div class="header__contacts">  <!-- элемент по БЭМ -->
                     <a href="tel:+74999228974" class="header__phone">+7 (499) 922-89-74</a> <!-- элемент по БЭМ -->
-                    <button class="button button_mobile">заказать звонок</button> <!-- блок по БЭМ -->
+                    <button data-modal="consultation" class="button button_mobile">заказать звонок</button> <!-- блок по БЭМ /// задаем кнопке атрибут, чтобы использовать её вдальнейшем по этому атрибуту в скрипте для настройки модального окна -->
                 </div>
             </header>    
             <div class="promo__wrapper">    <!-- "обёртка. С помощью этого блока будем выравнивать флексами дочерние (в html) элементы" -->
@@ -40,7 +40,7 @@
                         на все вопросы
                     </div>
                 </div>
-                <button class="button button_main">заказать консультацию</button> <!-- button - блок по БЭП, button_main - модификатор -->
+                <button data-modal="consultation" class="button button_main">заказать консультацию</button> <!-- button - блок по БЭП, button_main - модификатор /// задаем кнопке атрибут, чтобы использовать её вдальнейшем по этому атрибуту в скрипте для настройки модального окна -->
                 <div class="promo__link">или <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a></div>
             </div>    
         </div>
@@ -395,7 +395,7 @@
                     </div>
                 </div>
             </div>
-            <div class="reviews-item">
+            <div class="reviews-item">  
                 <img src="img/photo_3.jpg" alt="photo" class="reviews-item__photo">
                 <div class="reviews-item__text">
                     <div class="reviews-item__name">Юлия Дашкина</div>
@@ -425,6 +425,39 @@
         </div>
     </footer>
     
+    <!-- Создадим модальные окна, назначим каждому из них id для работы с ними в js: -->
+    <div class="overlay">   <!-- затемнение заднего фона -->
+        <div class="modal modal_mobile" id="consultation">   <!-- модальное окно "заказать консультацию" -->  
+            <div class="modal__close">&times;</div>     <!-- &times - спецсимвол "крестик" -->
+            <div class="modal__subtitle">Просто заполните форму заявки</div>
+            <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
+            <form class="feed-form feed-form_mobile feed-form_mt25" action="#">     <!-- переиспользуем ранее созданую форму (блок по БЭМ) -->
+                <input name="name" required placeholder="Ваше имя" type="text">
+                <input name="phone" required placeholder="Ваш телефон" type="number">
+                <input name="email" required placeholder="Ваш E-mail" type="email">
+                
+                <button class="button button_submit">заказать консультацию</button>
+            </form>
+        </div>
+        <div class="modal modal_mobile" id="order">   <!-- модальное окно "купить" -->  
+            <div class="modal__close">&times;</div>    
+            <div class="modal__subtitle">Ваш заказ:</div>
+            <div class="modal__descr">Пульсометр Polar FT1</div>
+            <form class="feed-form feed-form_mobile feed-form_mt25" action="#">   
+                <input name="name" required placeholder="Ваше имя" type="text">
+                <input name="phone" required placeholder="Ваш телефон" type="number">
+                <input name="email" required placeholder="Ваш E-mail" type="email">
+                
+                <button class="button button_submit">Купить</button>
+            </form>
+        </div>
+        <div class="modal modal_mobile" id="thanks">   <!-- модальное окно "спасибо за заявку" -->  
+            <div class="modal__close">&times;</div>    
+            <div class="modal__subtitle">Спасибо за вашу заявку!</div>
+            <div class="modal__descr">Наш менеджер свяжется с вами<br>в ближайшее время!</div>
+        </div>
+    </div>
+
     <!-- Подключение слайдера Slick с помощью JQuery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>    <!--  подключение библиотеки jquery (вначале добавил "https:" чтобы скрипты заработали) -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>   <!--  подключение библиотеки jquery (вначале добавил "https:" чтобы скрипты заработали) -->
