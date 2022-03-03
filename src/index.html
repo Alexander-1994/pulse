@@ -83,10 +83,10 @@
             <div class="consultation__descr">
                 Просто заполните форму заявки<br>и мы перезвоним вам в течении 10 минут
             </div>
-            <form class="feed-form feed-form_mobile" action="#">     <!-- форма -->
-                <input name="name" required placeholder="Ваше имя" type="text">
-                <input name="phone" required placeholder="Ваш телефон" type="number">
-                <input name="email" required placeholder="Ваш E-mail" type="email">
+            <form class="feed-form feed-form_mobile" id="consultation-form" action="#">     <!-- задал id форме, чтобы вдальнейшем использовать эту форму в js-файле -->
+                <input name="name" placeholder="Ваше имя" type="text">
+                <input name="phone" placeholder="Ваш телефон" type="number">
+                <input name="email" placeholder="Ваш E-mail" type="email">
                 <!-- <input type="submit" value="заказать консультацию"> - это первый вариант создания кнопки для формы -->
                 <button class="button button_submit">заказать консультацию</button>
             </form>
@@ -432,9 +432,9 @@
             <div class="modal__subtitle">Просто заполните форму заявки</div>
             <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
             <form class="feed-form feed-form_mobile feed-form_mt25" action="#">     <!-- переиспользуем ранее созданую форму (блок по БЭМ) -->
-                <input name="name" required placeholder="Ваше имя" type="text">
-                <input name="phone" required placeholder="Ваш телефон" type="number">
-                <input name="email" required placeholder="Ваш E-mail" type="email">
+                <input name="name" placeholder="Ваше имя" type="text">
+                <input name="phone" placeholder="Ваш телефон" type="number">
+                <input name="email" placeholder="Ваш E-mail" type="email">
                 
                 <button class="button button_submit">заказать консультацию</button>
             </form>
@@ -444,9 +444,9 @@
             <div class="modal__subtitle">Ваш заказ:</div>
             <div class="modal__descr">Пульсометр Polar FT1</div>
             <form class="feed-form feed-form_mobile feed-form_mt25" action="#">   
-                <input name="name" required placeholder="Ваше имя" type="text">
-                <input name="phone" required placeholder="Ваш телефон" type="number">
-                <input name="email" required placeholder="Ваш E-mail" type="email">
+                <input name="name" placeholder="Ваше имя" type="text">
+                <input name="phone" placeholder="Ваш телефон" type="number">
+                <input name="email" placeholder="Ваш E-mail" type="email">
                 
                 <button class="button button_submit">Купить</button>
             </form>
@@ -458,10 +458,11 @@
         </div>
     </div>
 
-    <!-- Подключение слайдера Slick с помощью JQuery -->
+    <!-- Подключение слайдера Slick с помощью JQuery: -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>    <!--  подключение библиотеки jquery (вначале добавил "https:" чтобы скрипты заработали) -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>   <!--  подключение библиотеки jquery (вначале добавил "https:" чтобы скрипты заработали) -->
     <script type="text/javascript" src="js/slick.min.js"></script>   <!-- js-файл с самим слайдером (подключаем после jquery) -->
+    <script src="js/jquery.validate.min.js"></script>   <!-- подключаем валидатор для валидации формы, который я скачал архивом с jqueryvalidator.org -->
 
     <script src="js/script.js"></script>    <!-- наш рабочий js-файл (в конце всех скриптов) В нем записываем разл. настройки, скрипты поведения нашего сайта и т.д. -->
 </body>
