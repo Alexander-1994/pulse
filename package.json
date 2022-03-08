@@ -1,5 +1,5 @@
 {
-  "name": "uber",
+  "name": "pulse",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -18,11 +18,13 @@
     "gulp-sass": "^5.1.0",
     "sass": "^1.49.7"
   },
-  "browserslist": [  
+  "browserslist": [
     "last 2 version",
     "> 1%",
     "maintained node versions",
     "not dead"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "-": "^0.0.1"
+  }
 }

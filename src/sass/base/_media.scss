@@ -120,6 +120,14 @@
 			}
 		}
 	}
+	.modal {
+		&__close {
+			&:hover {									 /* отключаем эффект наведения на крестик */
+				font-size: 40px;
+				color: $main-color;
+			}
+		}
+	}
 }
 @media (max-width: 575px) {
 	.container {

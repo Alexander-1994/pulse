@@ -8,4 +8,13 @@
         line-height: 30px;
         color: $white;
     }
+    .error {                                                /* этот класс содержит предупреждение, которое появляется при ошибке заполнения формы (использ. JqueryValidationPlagin) нашёл его через консоль */
+        margin-bottom: 15px;
+        text-align: center;
+        border: 1px solid $main-color;
+        color: grey;
+    }
+    label.error {                                           /* используем такую вложенность, чтобы отключить обводку самого предупреждения (текста) */
+        border: none;
+    }
 }

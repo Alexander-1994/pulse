@@ -23,7 +23,7 @@
                     <button data-modal="consultation" class="button button_mobile">заказать звонок</button> <!-- блок по БЭМ /// задаем кнопке атрибут, чтобы использовать её вдальнейшем по этому атрибуту в скрипте для настройки модального окна -->
                 </div>
             </header>    
-            <div class="promo__wrapper">    <!-- "обёртка. С помощью этого блока будем выравнивать флексами дочерние (в html) элементы" -->
+            <div class="promo__wrapper">    <!-- "обёртка" С помощью этого блока будем выравнивать флексами дочерние (в html) элементы -->
                 <h1 class="promo__header">Подбор пульсометра</h1>
                 <h2 class="promo__subheader">с учётом Вашего уровня подготовки</h2>
                 <div class="promo__icons">
@@ -85,7 +85,7 @@
             </div>
             <form class="feed-form feed-form_mobile" id="consultation-form" action="#">     <!-- задал id форме, чтобы вдальнейшем использовать эту форму в js-файле -->
                 <input name="name" placeholder="Ваше имя" type="text">
-                <input name="phone" placeholder="Ваш телефон" type="number">
+                <input name="phone" placeholder="Ваш телефон">
                 <input name="email" placeholder="Ваш E-mail" type="email">
                 <!-- <input type="submit" value="заказать консультацию"> - это первый вариант создания кнопки для формы -->
                 <button class="button button_submit">заказать консультацию</button>
@@ -433,7 +433,7 @@
             <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
             <form class="feed-form feed-form_mobile feed-form_mt25" action="#">     <!-- переиспользуем ранее созданую форму (блок по БЭМ) -->
                 <input name="name" placeholder="Ваше имя" type="text">
-                <input name="phone" placeholder="Ваш телефон" type="number">
+                <input name="phone" placeholder="Ваш телефон">
                 <input name="email" placeholder="Ваш E-mail" type="email">
                 
                 <button class="button button_submit">заказать консультацию</button>
@@ -445,7 +445,7 @@
             <div class="modal__descr">Пульсометр Polar FT1</div>
             <form class="feed-form feed-form_mobile feed-form_mt25" action="#">   
                 <input name="name" placeholder="Ваше имя" type="text">
-                <input name="phone" placeholder="Ваш телефон" type="number">
+                <input name="phone" placeholder="Ваш телефон">
                 <input name="email" placeholder="Ваш E-mail" type="email">
                 
                 <button class="button button_submit">Купить</button>
@@ -462,8 +462,9 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>    <!--  подключение библиотеки jquery (вначале добавил "https:" чтобы скрипты заработали) -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>   <!--  подключение библиотеки jquery (вначале добавил "https:" чтобы скрипты заработали) -->
     <script type="text/javascript" src="js/slick.min.js"></script>   <!-- js-файл с самим слайдером (подключаем после jquery) -->
+    
     <script src="js/jquery.validate.min.js"></script>   <!-- подключаем валидатор для валидации формы, который я скачал архивом с jqueryvalidator.org -->
-
+    <script src="js/jquery.maskedinput.min.js"></script>    <!-- подключаем плагин для создания масок в инпутах (я буду его использовать для создания маски номера телефона)-->
     <script src="js/script.js"></script>    <!-- наш рабочий js-файл (в конце всех скриптов) В нем записываем разл. настройки, скрипты поведения нашего сайта и т.д. -->
 </body>
 </html>
