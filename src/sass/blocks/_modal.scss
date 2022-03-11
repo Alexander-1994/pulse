@@ -15,6 +15,9 @@
     width: 380px;
     min-height: 400px;
     background-color: #F2F2F2;;
+    &:first-child {
+        height: 143px;
+    }
     &__close {                                              /* т.к. крестик - текстовый символ, мы можем задавать ему размер шрифта и жирность */
         position: absolute;
         top: 0;
@@ -42,6 +45,9 @@
         font-size: 14px;
         line-height: 22px;
         text-align: center;
+    }
+    &_mini {
+        min-height: 140px;
     }
     .error {                                                /* этот класс содержит предупреждение, которое появляется при ошибке заполнения формы (использ. JqueryValidationPlagin) нашёл его через консоль */
         margin-bottom: 15px;
