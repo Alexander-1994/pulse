@@ -31,4 +31,18 @@
 			text-transform: uppercase;
 		}
 	}
+	&__icon {
+		&_animation {														/* данный модификатор я добавил иконке "сердце" для созд. анимации */
+			animation: heartbeat 1.5s ease infinite;							/* краткая запись св-ва animation */
+			/* animation-name: heartbeat;				- указываем, какая именно анимация будет применяться (по названию) */
+			/* animation-duration: 1.5s;					- время длительности анимации (цикл: от и до) */
+			/* animation-timing-function: ease;			- РАЗВИТИЕ анимации м/у её ключевыми кадрами - ease (анимация начинается медленно, разгоняется быстро и замедляется в конце) */
+			/* animation-iteration-count: infinite;		- количество полных повторений анимации - бесконечно */
+			&:hover {
+				animation-play-state: paused;								/* при наведении мышки на иконку "сердце" анимация приостановится */
+			}
+		}
+	}
 }
+
+

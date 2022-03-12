@@ -7,8 +7,9 @@
     <title>Pulse</title>
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/fonts.css">
-     <link rel="stylesheet" href="css/slick.css">   <!-- стили к slick-карусели --> 
-     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/slick.css">   <!-- стили к slick-карусели --> 
+    <link rel="stylesheet" href="css/animate.min.css">  <!-- библиотека css-анимаций -->
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
     <section class="promo" id="up">
@@ -58,7 +59,7 @@
                     </div>
                 </div>
                 <div class="advantages__item">
-                    <img src="icons/heart.png" alt="heart" class="advantages__icon">
+                    <img src="icons/heart.png" alt="heart" class="advantages__icon advantages__icon_animation"> <!-- добавил модификатор для создания анимации у иконки "сердце" -->
                     <div class="advantages__subtitle">Заботимся о здоровье</div>
                     <div class="advantages__descr">
                         Мы работаем для того, <br>чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в радость Вам и Вашим близким!
@@ -112,7 +113,7 @@
                 <li class="catalog__tab"><div>для триатлона</div></li>
             </ul>   <!-- в div помещаем текст табов, чтобы потом по тегу отменить наклон текста -->
             <div class="catalog__content catalog__content_active">  <!-- контент под вкладку ДЛЯ ФИТНЕСА [самаому первому КОНТЕНТу устанавливаем класс активности, чтобы он был активен по-умолчанию] -->
-                <div class="catalog-item">  <!-- создаём карточку -->
+                <div class="catalog-item animate__animated animate__fadeInRight wow" data-wow-duration="2s" data-wow-delay="1s">  <!-- создаём карточку -->
                     <div class="catalog-item__wrapper">     <!-- создаем обёртку под "контент" и "лист" (описание) они будут чередоваться м/у собой -->
                         <div class="catalog-item__content catalog-item__content_active">     <!-- "контент" - лицевая сторона карточки [именно "лицевой стороне" устанавливаем класс активности, чтобы она была активна по-умолчанию]-->
                             <img src="img/pulsometr.jpg" alt="pulsometr" class="catalog-item__img">
@@ -139,7 +140,7 @@
                         <button class="button button_mini">КУПИТЬ</button>  <!-- с помощью модификатора, стилизуем кнопку(блок по БЭМ) -->          
                     </div>
                 </div>
-                <div class="catalog-item">  <!-- создаём карточку 2 -->
+                <div class="catalog-item animate__animated animate__fadeInRight wow" data-wow-duration="2s" data-wow-delay="1s">  <!-- создаём карточку 2 -->
                     <div class="catalog-item__wrapper">     <!-- создаем обёртку под "контент" и "лист" (описание) они будут чередоваться м/у собой -->
                         <div class="catalog-item__content catalog-item__content_active">     <!-- "контент" - лицевая сторона карточки -->
                             <img src="img/pulsometr.jpg" alt="pulsometr" class="catalog-item__img">
@@ -166,7 +167,7 @@
                         <button class="button button_mini">КУПИТЬ</button>  <!-- с помощью модификатора, стилизуем кнопку(блок по БЭМ) -->          
                     </div>
                 </div>
-                <div class="catalog-item">  <!-- создаём карточку 3 -->
+                <div class="catalog-item animate__animated animate__fadeInRight wow" data-wow-duration="2s" data-wow-delay="1s">  <!-- создаём карточку 3 -->
                     <div class="catalog-item__wrapper">     <!-- создаем обёртку под "контент" и "лист" (описание) они будут чередоваться м/у собой -->
                         <div class="catalog-item__content catalog-item__content_active">     <!-- "контент" - лицевая сторона карточки -->
                             <img src="img/pulsometr.jpg" alt="pulsometr" class="catalog-item__img">
@@ -193,7 +194,7 @@
                         <button class="button button_mini">КУПИТЬ</button>  <!-- с помощью модификатора, стилизуем кнопку(блок по БЭМ) -->          
                     </div>
                 </div>
-                <div class="catalog-item">  <!-- создаём карточку 4 -->
+                <div class="catalog-item animate__animated animate__fadeInRight wow" data-wow-duration="2s" data-wow-delay="1s">  <!-- создаём карточку 4 -->
                     <div class="catalog-item__wrapper">     <!-- создаем обёртку под "контент" и "лист" (описание) они будут чередоваться м/у собой -->
                         <div class="catalog-item__content catalog-item__content_active">     <!-- "контент" - лицевая сторона карточки -->
                             <img src="img/pulsometr.jpg" alt="pulsometr" class="catalog-item__img">
@@ -220,7 +221,7 @@
                         <button class="button button_mini">КУПИТЬ</button>  <!-- с помощью модификатора, стилизуем кнопку(блок по БЭМ) -->          
                     </div>
                 </div>
-                <div class="catalog-item">  <!-- создаём карточку 5 -->
+                <div class="catalog-item animate__animated animate__fadeInRight wow" data-wow-duration="2s" data-wow-delay="1s">  <!-- создаём карточку 5 -->
                     <div class="catalog-item__wrapper">     <!-- создаем обёртку под "контент" и "лист" (описание) они будут чередоваться м/у собой -->
                         <div class="catalog-item__content catalog-item__content_active">     <!-- "контент" - лицевая сторона карточки -->
                             <img src="img/pulsometr.jpg" alt="pulsometr" class="catalog-item__img">
@@ -247,7 +248,7 @@
                         <button class="button button_mini">КУПИТЬ</button>  <!-- с помощью модификатора, стилизуем кнопку(блок по БЭМ) -->          
                     </div>
                 </div>
-                <div class="catalog-item">  <!-- создаём карточку 6 -->
+                <div class="catalog-item animate__animated animate__fadeInRight wow" data-wow-duration="2s" data-wow-delay="1s">  <!-- создаём карточку 6 -->
                     <div class="catalog-item__wrapper">     <!-- создаем обёртку под "контент" и "лист" (описание) они будут чередоваться м/у собой -->
                         <div class="catalog-item__content catalog-item__content_active">     <!-- "контент" - лицевая сторона карточки -->
                             <img src="img/pulsometr.jpg" alt="pulsometr" class="catalog-item__img">
@@ -276,7 +277,7 @@
                 </div>
             </div>
             <div class="catalog__content">  <!-- контент под вкладку ДЛЯ БЕГА -->
-                <div class="catalog-item">  
+                <div class="catalog-item animate__animated animate__fadeInRight wow" data-wow-duration="2s" data-wow-delay="1s">  
                     <div class="catalog-item__wrapper">     <!-- создаем обёртку под "контент" и "лист" (описание) они будут чередоваться м/у собой -->
                         <div class="catalog-item__content catalog-item__content_active">     <!-- "контент" - лицевая сторона карточки -->
                             <img src="img/pulsometr.jpg" alt="pulsometr" class="catalog-item__img">
@@ -305,7 +306,7 @@
                 </div>
             </div>  
             <div class="catalog__content">  <!-- контент под вкладку ДЛЯ ТРИАТЛОНА -->
-                <div class="catalog-item">  
+                <div class="catalog-item animate__animated animate__fadeInRight wow" data-wow-duration="2s" data-wow-delay="1s">  
                     <div class="catalog-item__wrapper">     <!-- создаем обёртку под "контент" и "лист" (описание) они будут чередоваться м/у собой -->
                         <div class="catalog-item__content catalog-item__content_active">     <!-- "контент" - лицевая сторона карточки -->
                             <img src="img/pulsometr.jpg" alt="pulsometr" class="catalog-item__img">
@@ -332,7 +333,7 @@
                         <button class="button button_mini">КУПИТЬ</button>  <!-- с помощью модификатора, стилизуем кнопку(блок по БЭМ) -->          
                     </div>
                 </div>
-                <div class="catalog-item">  
+                <div class="catalog-item animate__animated animate__fadeInRight wow" data-wow-duration="2s" data-wow-delay="1s">  
                     <div class="catalog-item__wrapper">     <!-- создаем обёртку под "контент" и "лист" (описание) они будут чередоваться м/у собой -->
                         <div class="catalog-item__content catalog-item__content_active">     <!-- "контент" - лицевая сторона карточки -->
                             <img src="img/pulsometr.jpg" alt="pulsometr" class="catalog-item__img">
@@ -366,7 +367,7 @@
     <section class="reviews">
         <div class="container">
             <h2 class="title title_mobile">отзывы клиентов</h2>
-            <div class="reviews-item">
+            <div class="reviews-item animate__animated animate__fadeInUp wow" data-wow-duration="2s" data-wow-delay="1s">   <!-- animate__animated-обяз. класс для исп. библиотеки animate.css; animate__fadeInUp - конкретная анимация; wow - исп. плагина для воспр. анимации при прокрутке; data-wow-duration="2s" - дата-атрибут:"в течении 2s"; data-wow-delay="1s" - дата-атрибут:"через 1s" -->
                 <img src="img/photo_1.jpg" alt="photo" class="reviews-item__photo">
                 <div class="reviews-item__text">
                     <div class="reviews-item__name">Ирина Иванченко </div>
@@ -381,7 +382,7 @@
                     </div>
                 </div>
             </div>
-            <div class="reviews-item">
+            <div class="reviews-item animate__animated animate__fadeInUp wow" data-wow-duration="2s" data-wow-delay="1s">
                 <img src="img/photo_2.jpg" alt="photo" class="reviews-item__photo">
                 <div class="reviews-item__text">
                     <div class="reviews-item__name">Иван Сёмочкин</div>
@@ -395,7 +396,7 @@
                     </div>
                 </div>
             </div>
-            <div class="reviews-item">  
+            <div class="reviews-item animate__animated animate__fadeInUp wow" data-wow-duration="2s" data-wow-delay="1s">  
                 <img src="img/photo_3.jpg" alt="photo" class="reviews-item__photo">
                 <div class="reviews-item__text">
                     <div class="reviews-item__name">Юлия Дашкина</div>
@@ -470,6 +471,8 @@
     
     <script src="js/jquery.validate.min.js"></script>   <!-- подключаем валидатор для валидации формы, который я скачал архивом с jqueryvalidator.org -->
     <script src="js/jquery.maskedinput.min.js"></script>    <!-- подключаем плагин для создания масок в инпутах (я буду его использовать для создания маски номера телефона)-->
+    <script src="js/wow.min.js"></script>   <!-- подключаем плагин для запуска css-анимаций при прокрутке сайта (работает в паре с animate.min.css) -->
+    
     <script src="js/script.js"></script>    <!-- наш рабочий js-файл (в конце всех скриптов) В нем записываем разл. настройки, скрипты поведения нашего сайта и т.д. -->
 </body>
 </html>
