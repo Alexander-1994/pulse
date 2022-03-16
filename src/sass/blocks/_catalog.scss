@@ -126,13 +126,15 @@
         }
         &__list {
             position: relative;                                            /* для абсолютного позиц. дочерней ссылки НАЗАД */
-            margin-left: 20px;
-            margin-bottom: 0;                                              /* отключ. значения reebot у списка */
-            padding-left: 19px;                                            /* перекрываем значение reebot у списка нужным нам значением */
             width: 50%;                                                    /* 50% от родителя (wrapper) */
             transform: translateX(0);
-            list-style-type: none;
             transition: 0.5s all;
+            ul {
+                margin-left: 20px;
+                margin-bottom: 0;                                          /* отключ. значения reebot у списка */
+                padding-left: 19px;                                        /* перекрываем значение reebot у списка нужным нам значением */
+                list-style-type: none;
+            }
             li {
                 position: relative;                                        /* для абсолютного позиц. псевдоэлемента */
                 margin-bottom: 5px;
